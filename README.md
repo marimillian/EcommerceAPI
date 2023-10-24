@@ -13,9 +13,9 @@ Senha
 ```csharp
 Admin123!
 ```
-Além disso, a API consome uma API externa do ViaCEP para cadastrar informações sobre endereços, como por exemplo cadastrar o Centro de Distribuição.
+Além disso, a API consome uma API externa do ViaCEP para cadastrar informações sobre endereços, como por exemplo, cadastrar o Centro de Distribuição.
 
-Para utilizar esta API, basta clonar o repositório e excutar alguns comandos no Gerenciador de Pacote:
+Para utilizar esta API, basta clonar o repositório e executar alguns comandos no Gerenciador de Pacote:
 
 Migration
 ```csharp
