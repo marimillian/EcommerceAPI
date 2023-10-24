@@ -1,0 +1,1034 @@
+2023-09-29 17:37:34.637 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoriaId (Ecommerce-API)'
+2023-09-29 17:37:34.637 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/Categoria/56 - - - 200 - application/json;+charset=utf-8 132.3116ms
+2023-09-29 17:37:42.574 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/Categoria - -
+2023-09-29 17:37:42.574 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 17:37:42.577 -03:00 [INF] Route matched with {action = "PesquisarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult PesquisarCategoria(Ecommerce_API.Data.DTOS.Categoria.FilterCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:37:42.587 -03:00 [INF] Foi requisitada a pesquisa de uma Categoria
+2023-09-29 17:37:42.590 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:37:42.616 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT * FROM `ECOMMERCEAPI`.CATEGORIAS WHERE 1=1
+2023-09-29 17:37:42.632 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.634 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.636 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.638 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.640 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.641 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.643 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.644 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.645 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.646 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.648 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.649 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.651 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.652 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.653 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.654 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.655 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.655 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.656 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.657 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.658 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.659 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.660 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.660 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.661 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.662 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.663 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.664 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.665 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.666 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.667 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.669 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.670 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:42.670 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce_API.Data.DTOS.Categoria.ReadCategoriaDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-29 17:37:42.671 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API) in 93.1054ms
+2023-09-29 17:37:42.671 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 17:37:42.671 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/Categoria - - - 200 - application/json;+charset=utf-8 96.5706ms
+2023-09-29 17:46:03.053 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:46:03.380 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:46:03.482 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:46:03.482 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:46:03.484 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:46:03.485 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:46:03.485 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:46:03.978 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:46:04.193 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 217.8207ms
+2023-09-29 17:46:04.199 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:46:04.199 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:46:04.202 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.7353ms
+2023-09-29 17:46:04.210 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3265ms
+2023-09-29 17:46:04.438 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:46:04.545 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.7665ms
+2023-09-29 17:46:26.182 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:46:26.189 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 6.7230ms
+2023-09-29 17:46:26.198 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:46:26.200 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:46:26.200 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.3519ms
+2023-09-29 17:46:26.204 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 6.0872ms
+2023-09-29 17:46:26.348 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:46:26.353 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.0420ms
+2023-09-29 17:47:40.564 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:47:40.568 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 3.8325ms
+2023-09-29 17:47:40.573 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:47:40.573 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:47:40.573 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.2142ms
+2023-09-29 17:47:40.576 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.4307ms
+2023-09-29 17:47:40.718 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:47:40.722 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.4424ms
+2023-09-29 17:47:46.581 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61
+2023-09-29 17:47:46.613 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:47:46.661 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:47:47.135 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 66
+2023-09-29 17:47:48.061 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:47:48.414 -03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:47:48.499 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:47:48.556 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:47:48.560 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:47:48.563 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:47:48.567 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 17:47:48.613 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:47:48.779 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataCriacao`, `DataModificacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 17:47:48.852 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:47:48.857 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 2190.9551ms
+2023-09-29 17:47:48.858 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:47:48.862 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61 - 204 - - 2280.3014ms
+2023-09-29 17:48:13.034 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/Categoria - -
+2023-09-29 17:48:13.035 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 17:48:13.037 -03:00 [INF] Route matched with {action = "PesquisarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult PesquisarCategoria(Ecommerce_API.Data.DTOS.Categoria.FilterCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:48:13.041 -03:00 [INF] Foi requisitada a pesquisa de uma Categoria
+2023-09-29 17:48:13.043 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:48:13.062 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT * FROM `ECOMMERCEAPI`.CATEGORIAS WHERE 1=1
+2023-09-29 17:48:13.109 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.116 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.117 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.120 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.122 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.125 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.128 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.130 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.131 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.133 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.134 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.135 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.137 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.138 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.140 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.141 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.143 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.144 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.145 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.146 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.147 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.148 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.149 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.150 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.151 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.153 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.154 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.155 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.157 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.158 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.159 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.160 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.161 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.162 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:48:13.166 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce_API.Data.DTOS.Categoria.ReadCategoriaDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-29 17:48:13.175 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API) in 138.2157ms
+2023-09-29 17:48:13.175 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 17:48:13.176 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/Categoria - - - 200 - application/json;+charset=utf-8 141.5848ms
+2023-09-29 17:49:06.247 -03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7161/Categoria/66 - -
+2023-09-29 17:49:06.249 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API)'
+2023-09-29 17:49:06.252 -03:00 [INF] Route matched with {action = "ApagarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApagarCategoria(Int32) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:49:06.257 -03:00 [INF] Requisição para deletar uma Categoria de ID: 66
+2023-09-29 17:49:06.313 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:49:06.316 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:49:06.335 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `Categorias`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2023-09-29 17:49:06.351 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:49:06.351 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API) in 98.7449ms
+2023-09-29 17:49:06.351 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API)'
+2023-09-29 17:49:06.351 -03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7161/Categoria/66 - - - 204 - - 104.4041ms
+2023-09-29 17:50:54.848 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:50:55.148 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:50:55.226 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:50:55.226 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:50:55.228 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:50:55.228 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:50:55.229 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:50:55.991 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:50:56.189 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 200.8282ms
+2023-09-29 17:50:56.192 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:50:56.192 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:50:56.195 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.3291ms
+2023-09-29 17:50:56.203 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3493ms
+2023-09-29 17:50:56.290 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:50:56.397 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.0684ms
+2023-09-29 17:51:03.385 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245
+2023-09-29 17:51:03.407 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:51:03.446 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:51:04.734 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:51:05.051 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:51:05.160 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:51:05.228 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:51:05.231 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:51:05.233 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:51:05.237 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:51:05.239 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:51:05.241 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:51:05.427 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Produtos` (`Altura`, `CategoriaId`, `CentroDistribuicaoId`, `Comprimento`, `DataCriacao`, `DataModificacao`, `Descricao`, `Largura`, `Nome`, `Peso`, `Quantidade`, `Status`, `SubcategoriaId`, `Valor`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Produtos`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 17:51:05.493 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:51:05.497 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 2047.6595ms
+2023-09-29 17:51:05.498 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:51:05.502 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245 - 204 - - 2116.2176ms
+2023-09-29 17:54:46.921 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:54:47.221 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:54:47.312 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:54:47.312 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:54:47.315 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:54:47.315 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:54:47.315 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:54:47.680 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:54:47.918 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 263.5635ms
+2023-09-29 17:54:47.921 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:54:47.921 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:54:47.925 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.0538ms
+2023-09-29 17:54:47.934 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.4723ms
+2023-09-29 17:54:47.999 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:54:48.088 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.2934ms
+2023-09-29 17:54:52.436 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245
+2023-09-29 17:54:52.453 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:54:52.475 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:54:53.285 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:54:53.518 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:54:53.593 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:54:53.599 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 1120.9721ms
+2023-09-29 17:54:53.600 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:54:53.618 -03:00 [ERR] Ocorreu um erro: Ecommerce_API.NameExceptions: Já existe um produto com o mesmo nome.
+   at Ecommerce_API.Services.ProdutoService.VerificacaoDosDados(String nome, Int32 categoriaId, Int32 subcategoriaId, Int32 centroId, Nullable`1 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\ProdutoService.cs:line 77
+   at Ecommerce_API.Services.ProdutoService.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\ProdutoService.cs:line 61
+   at Ecommerce_API.Controllers.ProdutoController.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\ProdutoController.cs:line 71
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:54:53.687 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245 - 400 - application/json 1251.7413ms
+2023-09-29 17:56:58.706 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 267
+2023-09-29 17:56:58.707 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:56:58.707 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:56:58.714 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:56:58.718 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:56:58.719 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:56:58.775 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:56:58.781 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:56:58.785 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:56:58.791 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:56:58.793 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:56:58.795 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:56:58.988 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Produtos` (`Altura`, `CategoriaId`, `CentroDistribuicaoId`, `Comprimento`, `DataCriacao`, `DataModificacao`, `Descricao`, `Largura`, `Nome`, `Peso`, `Quantidade`, `Status`, `SubcategoriaId`, `Valor`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT `Id`
+FROM `Produtos`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 17:56:59.045 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:56:59.045 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 338.3237ms
+2023-09-29 17:56:59.046 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:56:59.047 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 267 - 204 - - 340.7419ms
+2023-09-29 17:58:12.849 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:58:13.116 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:58:13.193 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:58:13.193 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:58:13.196 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:58:13.196 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:58:13.196 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:58:13.685 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:58:13.911 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 228.1546ms
+2023-09-29 17:58:13.914 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:58:13.914 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:58:13.916 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.2643ms
+2023-09-29 17:58:13.923 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.2041ms
+2023-09-29 17:58:14.149 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:58:14.287 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2407ms
+2023-09-29 17:58:22.707 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 267
+2023-09-29 17:58:22.732 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:58:22.758 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:58:24.145 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:58:24.476 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:58:24.589 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:58:24.640 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:58:24.648 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:58:24.651 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:58:24.656 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:58:24.658 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:58:24.659 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:58:24.683 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:58:24.687 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 1925.511ms
+2023-09-29 17:58:24.687 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:58:24.690 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 267 - 204 - - 1983.5431ms
+2023-09-29 18:01:39.304 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Categoria application/json 46
+2023-09-29 18:01:39.305 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API)'
+2023-09-29 18:01:39.308 -03:00 [INF] Route matched with {action = "CadastrarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CadastrarCategoria(Ecommerce_API.Data.DTOS.CreateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:01:39.313 -03:00 [INF] Foi requisitada a inserção de uma nova Categoria
+2023-09-29 18:01:39.317 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:01:39.321 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 18:01:39.334 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:01:39.337 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:01:39.338 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:01:39.479 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataCriacao`, `DataModificacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 18:01:39.584 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ecommerce_API.Response.Categoria.CategoriaResponse'.
+2023-09-29 18:01:39.596 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API) in 288.5966ms
+2023-09-29 18:01:39.597 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API)'
+2023-09-29 18:01:39.597 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Categoria application/json 46 - 201 - application/json;+charset=utf-8 293.0770ms
+2023-09-29 18:01:43.140 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/Categoria - -
+2023-09-29 18:01:43.141 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 18:01:43.143 -03:00 [INF] Route matched with {action = "PesquisarCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult PesquisarCategoria(Ecommerce_API.Data.DTOS.Categoria.FilterCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:01:43.147 -03:00 [INF] Foi requisitada a pesquisa de uma Categoria
+2023-09-29 18:01:43.187 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:01:43.202 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT * FROM `ECOMMERCEAPI`.CATEGORIAS WHERE 1=1
+2023-09-29 18:01:43.254 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.260 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.263 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.265 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.288 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.290 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.293 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.295 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.298 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.299 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.300 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.301 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.302 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.303 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.304 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.305 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.306 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.307 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.307 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.308 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.309 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.311 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.313 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.315 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.316 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.317 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.317 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.318 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.319 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.320 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.320 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.321 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.322 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.323 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 18:01:43.323 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce_API.Data.DTOS.Categoria.ReadCategoriaDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-09-29 18:01:43.323 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API) in 180.233ms
+2023-09-29 18:01:43.323 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoria (Ecommerce-API)'
+2023-09-29 18:01:43.323 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/Categoria - - - 200 - application/json;+charset=utf-8 183.7463ms
+2023-09-29 18:04:30.963 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 18:04:31.252 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 18:04:31.328 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 18:04:31.328 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 18:04:31.330 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 18:04:31.331 -03:00 [INF] Hosting environment: Development
+2023-09-29 18:04:31.331 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 18:04:31.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 18:04:31.973 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 210.4478ms
+2023-09-29 18:04:31.983 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 18:04:31.983 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 18:04:31.985 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.0863ms
+2023-09-29 18:04:31.994 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.3047ms
+2023-09-29 18:04:32.196 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 18:04:32.304 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.0688ms
+2023-09-29 18:05:09.196 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 18:05:09.201 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 5.1515ms
+2023-09-29 18:05:09.212 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 18:05:09.212 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 18:05:09.212 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.3467ms
+2023-09-29 18:05:09.216 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.9264ms
+2023-09-29 18:05:09.350 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 18:05:09.354 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.7260ms
+2023-09-29 18:05:32.390 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 61
+2023-09-29 18:05:32.434 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:05:32.491 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:05:33.072 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 68
+2023-09-29 18:05:33.954 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:05:34.259 -03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 18:05:34.364 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 1864.4261ms
+2023-09-29 18:05:34.364 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:05:34.402 -03:00 [ERR] Ocorreu um erro: Ecommerce_API.NameExceptions: Já existe uma Categoria com o mesmo nome.
+   at Ecommerce_API.Services.CategoriaService.VerificacaoDosDados(String nome, Nullable`1 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 145
+   at Ecommerce_API.Services.CategoriaService.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 71
+   at Ecommerce_API.Controllers.CategoriaController.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CategoriaController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 18:05:34.539 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 61 - 400 - application/json 2149.0531ms
+2023-09-29 18:05:45.049 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 66
+2023-09-29 18:05:45.049 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:05:45.049 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:05:45.054 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 68
+2023-09-29 18:05:45.055 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:05:45.068 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 18:05:45.227 -03:00 [INF] Executed DbCommand (30ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:05:45.231 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:05:45.234 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:05:45.244 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 18:05:45.289 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 18:05:45.336 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 18:05:45.493 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataCriacao`, `DataModificacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 18:05:45.554 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 18:05:45.555 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 505.8291ms
+2023-09-29 18:05:45.556 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:05:45.557 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 66 - 204 - - 508.2846ms
+2023-09-29 18:06:36.098 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 18:06:36.364 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 18:06:36.444 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 18:06:36.444 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 18:06:36.447 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 18:06:36.447 -03:00 [INF] Hosting environment: Development
+2023-09-29 18:06:36.447 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 18:06:36.931 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 18:06:37.121 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 193.1095ms
+2023-09-29 18:06:37.125 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 18:06:37.125 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 18:06:37.128 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.4818ms
+2023-09-29 18:06:37.136 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.5683ms
+2023-09-29 18:06:37.271 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 18:06:37.362 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.7025ms
+2023-09-29 18:06:51.679 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 69
+2023-09-29 18:06:51.708 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:06:51.754 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:06:52.260 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 68
+2023-09-29 18:06:53.277 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:06:53.506 -03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 18:06:53.744 -03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:06:53.749 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:06:53.754 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:06:53.763 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 18:06:53.802 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 18:06:53.844 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 18:06:53.873 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 18:06:53.878 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 2119.474ms
+2023-09-29 18:06:53.878 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:06:53.882 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 69 - 204 - - 2203.1462ms
+2023-09-29 18:08:11.072 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 18:08:11.339 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 18:08:11.420 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 18:08:11.420 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 18:08:11.423 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 18:08:11.424 -03:00 [INF] Hosting environment: Development
+2023-09-29 18:08:11.424 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 18:08:11.836 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 18:08:12.055 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 221.3697ms
+2023-09-29 18:08:12.055 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 18:08:12.055 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 18:08:12.058 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.1347ms
+2023-09-29 18:08:12.063 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.0627ms
+2023-09-29 18:08:12.141 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 18:08:12.230 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 88.3093ms
+2023-09-29 18:08:24.362 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 69
+2023-09-29 18:08:24.390 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:08:24.423 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 18:08:24.831 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 68
+2023-09-29 18:08:25.656 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:08:25.990 -03:00 [INF] Executed DbCommand (56ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 18:08:26.059 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 18:08:26.116 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:08:26.121 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:08:26.124 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:08:26.128 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 18:08:26.159 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 18:08:26.329 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataCriacao`, `DataModificacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 18:08:26.368 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 18:08:26.372 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 1944.8265ms
+2023-09-29 18:08:26.372 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 18:08:26.376 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/68 application/json 69 - 204 - - 2014.1138ms
+2023-09-29 18:10:44.283 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 18:10:44.290 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 6.8810ms
+2023-09-29 18:10:44.293 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 18:10:44.293 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 18:10:44.294 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.4133ms
+2023-09-29 18:10:44.314 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.3787ms
+2023-09-29 18:10:44.386 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 18:10:44.392 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.8973ms
+2023-09-29 18:10:48.901 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/CentroDistribuicao/11 application/json 123
+2023-09-29 18:10:48.902 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CentroDistribuicaoController.EditarCentroDistribuicao (Ecommerce-API)'
+2023-09-29 18:10:48.905 -03:00 [INF] Route matched with {action = "EditarCentroDistribuicao", controller = "CentroDistribuicao"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCentroDistribuicao(Ecommerce_API.Data.DTOS.CentroDistribuicao.UpdateCentroDistribuicaoDto, Int32) on controller Ecommerce_API.Controllers.CentroDistribuicaoController (Ecommerce-API).
+2023-09-29 18:10:49.390 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 18:10:49.396 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:10:49.400 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:10:49.403 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 18:10:49.409 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Nome`, `c`.`Numero`, `c`.`Status`, `c`.`UF`
+FROM `CentrosDistribuicoes` AS `c`
+2023-09-29 18:10:49.425 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Nome`, `c`.`Numero`, `c`.`Status`, `c`.`UF`
+FROM `CentrosDistribuicoes` AS `c`

@@ -1,0 +1,682 @@
+2023-10-01 12:15:21.974 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Carrinho/adicionarProduto application/json 71 - 400 - application/json 10.5576ms
+2023-10-01 12:15:57.038 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69
+2023-10-01 12:15:57.038 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:15:57.039 -03:00 [INF] Route matched with {action = "AlterarProdutoNoCarrinho", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AlterarProdutoNoCarrinho(Ecommerce_API.Data.DTOS.CarrinhoDeCompras.UpdateCarrinhoDto) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:15:57.041 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:15:57.043 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE (`p`.`Id` = @__id_0) AND NOT (`p`.`Status`))
+2023-10-01 12:15:57.044 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API) in 5.3117ms
+2023-10-01 12:15:57.044 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:15:57.046 -03:00 [ERR] Ocorreu um erro: Ecommerce_API.NameExceptions: O produto está inativo, não é possível adicioná-lo no carrinho.
+   at Ecommerce_API.Services.CarrinhoComprasService.VerificarDados(Int32 id, Int32 estoque) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 162
+   at Ecommerce_API.Services.CarrinhoComprasService.AlterarProdutoNoCarrinho(UpdateCarrinhoDto carrinhoDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 95
+   at Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho(UpdateCarrinhoDto carrinhoDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CarrinhoComprasController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:15:57.046 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69 - 400 - application/json 8.3133ms
+2023-10-01 12:16:02.541 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69
+2023-10-01 12:16:02.541 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:16:02.541 -03:00 [INF] Route matched with {action = "AlterarProdutoNoCarrinho", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AlterarProdutoNoCarrinho(Ecommerce_API.Data.DTOS.CarrinhoDeCompras.UpdateCarrinhoDto) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:16:02.543 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:16:02.544 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE (`p`.`Id` = @__id_0) AND NOT (`p`.`Status`))
+2023-10-01 12:16:02.545 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__estoque_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE `p`.`Quantidade` < @__estoque_0)
+2023-10-01 12:16:02.546 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__produtoNoCarrinho_ProdutoId_0='?' (DbType = Int32), @__produtoNoCarrinho_CarrinhoId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `ProdutosNoCarrinho` AS `p`
+    WHERE (`p`.`ProdutoId` = @__produtoNoCarrinho_ProdutoId_0) AND (`p`.`CarrinhoId` = @__produtoNoCarrinho_CarrinhoId_1))
+2023-10-01 12:16:02.547 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API) in 5.8128ms
+2023-10-01 12:16:02.547 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:16:02.549 -03:00 [ERR] Ocorreu um erro: Ecommerce_API.NameExceptions: O produto não se encontra no carrinho informado.
+   at Ecommerce_API.Services.CarrinhoComprasService.AlterarProdutoNoCarrinho(UpdateCarrinhoDto carrinhoDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 99
+   at Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho(UpdateCarrinhoDto carrinhoDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CarrinhoComprasController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:16:02.549 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69 - 400 - application/json 8.2916ms
+2023-10-01 12:16:18.229 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69
+2023-10-01 12:16:18.229 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:16:18.229 -03:00 [INF] Route matched with {action = "AlterarProdutoNoCarrinho", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AlterarProdutoNoCarrinho(Ecommerce_API.Data.DTOS.CarrinhoDeCompras.UpdateCarrinhoDto) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:16:18.231 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:16:18.233 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE (`p`.`Id` = @__id_0) AND NOT (`p`.`Status`))
+2023-10-01 12:16:18.234 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__estoque_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE `p`.`Quantidade` < @__estoque_0)
+2023-10-01 12:16:18.235 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__produtoNoCarrinho_ProdutoId_0='?' (DbType = Int32), @__produtoNoCarrinho_CarrinhoId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `ProdutosNoCarrinho` AS `p`
+    WHERE (`p`.`ProdutoId` = @__produtoNoCarrinho_ProdutoId_0) AND (`p`.`CarrinhoId` = @__produtoNoCarrinho_CarrinhoId_1))
+2023-10-01 12:16:18.237 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNoCarrinho_ProdutoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `ProdutosNoCarrinho` AS `p`
+    WHERE `p`.`ProdutoId` = @__produtoNoCarrinho_ProdutoId_0)
+2023-10-01 12:16:18.241 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `ProdutosNoCarrinho`
+WHERE `CarrinhoId` = @p0 AND `ProdutoId` = @p1;
+SELECT ROW_COUNT();
+2023-10-01 12:16:18.245 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:16:18.248 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:16:18.249 -03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto'.
+2023-10-01 12:16:18.249 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API) in 19.8818ms
+2023-10-01 12:16:18.249 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.AlterarProdutoNoCarrinho (Ecommerce-API)'
+2023-10-01 12:16:18.249 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Carrinho/alterarProduto application/json 69 - 200 - application/json;+charset=utf-8 20.4260ms
+2023-10-01 12:18:02.898 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:18:03.275 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:18:03.394 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:18:03.394 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:18:03.399 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:18:03.399 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:18:03.399 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:18:04.013 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:18:04.369 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:18:04.369 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:18:04.369 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 359.6939ms
+2023-10-01 12:18:04.372 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.9326ms
+2023-10-01 12:18:04.389 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.6686ms
+2023-10-01 12:18:04.777 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:18:04.888 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 111.6884ms
+2023-10-01 12:18:09.355 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Categoria application/json 51
+2023-10-01 12:18:09.396 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|lojista)
+2023-10-01 12:18:09.400 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-10-01 12:18:09.401 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Categoria application/json 51 - 401 0 - 45.4673ms
+2023-10-01 12:18:15.854 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/CentroDistribuicao application/json 106
+2023-10-01 12:18:15.859 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|lojista)
+2023-10-01 12:18:15.859 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-10-01 12:18:15.859 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/CentroDistribuicao application/json 106 - 401 0 - 5.5400ms
+2023-10-01 12:18:20.647 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Produto application/json 264
+2023-10-01 12:18:20.649 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|lojista)
+2023-10-01 12:18:20.650 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-10-01 12:18:20.650 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Produto application/json 264 - 401 0 - 3.0187ms
+2023-10-01 12:18:37.191 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/SubCategoria application/json 48
+2023-10-01 12:18:37.192 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|lojista)
+2023-10-01 12:18:37.192 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-10-01 12:18:37.192 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/SubCategoria application/json 48 - 401 0 - 0.8731ms
+2023-10-01 12:19:09.610 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:19:10.196 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:19:10.391 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:19:10.391 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:19:10.396 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:19:10.396 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:19:10.396 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:19:10.557 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:19:11.061 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:19:11.061 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:19:11.065 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 513.8556ms
+2023-10-01 12:19:11.068 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 6.2650ms
+2023-10-01 12:19:11.099 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.4452ms
+2023-10-01 12:19:11.265 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:19:11.479 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 213.4762ms
+2023-10-01 12:21:56.542 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:21:56.553 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 10.8333ms
+2023-10-01 12:21:56.571 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:21:56.571 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:21:56.572 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.5744ms
+2023-10-01 12:21:56.588 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.9781ms
+2023-10-01 12:21:56.761 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:21:56.774 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.0936ms
+2023-10-01 12:22:21.798 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:22:21.806 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 8.4371ms
+2023-10-01 12:22:21.858 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:22:21.858 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.3616ms
+2023-10-01 12:22:21.858 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:22:21.921 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.8973ms
+2023-10-01 12:22:22.188 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:22:22.198 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.5587ms
+2023-10-01 12:22:28.452 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=11 - -
+2023-10-01 12:22:28.498 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:22:28.545 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:22:30.249 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:22:30.667 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:22:30.786 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:22:30.835 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 2285.3024ms
+2023-10-01 12:22:30.836 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:22:30.894 -03:00 [ERR] Ocorreu um erro: System.AggregateException: One or more errors occurred. (Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Task`1 -> ReadCarrinhoDto
+System.Threading.Tasks.Task`1[[Ecommerce_API.Models.CarrinhoDeComprasModel, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto)
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Task`1 -> ReadCarrinhoDto
+System.Threading.Tasks.Task`1[[Ecommerce_API.Models.CarrinhoDeComprasModel, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto
+   at lambda_method67(Closure , Object , ReadCarrinhoDto , ResolutionContext )
+   at Ecommerce_API.Services.CarrinhoComprasService.PesquisarCarrinhoId(Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 180
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:22:31.028 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=11 - - - 500 - application/json 2576.1012ms
+2023-10-01 12:23:19.172 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:23:19.797 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:23:19.931 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:23:19.931 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:23:19.935 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:23:19.936 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:23:19.936 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:23:20.466 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:23:20.869 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:23:20.869 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:23:20.870 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 409.9360ms
+2023-10-01 12:23:20.872 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.8861ms
+2023-10-01 12:23:20.886 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.4647ms
+2023-10-01 12:23:21.018 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:23:21.157 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-10-01 12:23:21.183 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 164.7650ms
+2023-10-01 12:23:34.774 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:23:35.406 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:23:35.649 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:23:35.649 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:23:35.655 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:23:35.656 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:23:35.656 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:23:35.800 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:23:36.324 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:23:36.324 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:23:36.326 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 531.7917ms
+2023-10-01 12:23:36.328 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.8144ms
+2023-10-01 12:23:36.341 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.5976ms
+2023-10-01 12:23:36.426 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:23:36.557 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-10-01 12:23:36.610 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 184.3573ms
+2023-10-01 12:24:06.823 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:24:07.508 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:24:07.691 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:24:07.691 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:24:07.695 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:24:07.695 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:24:07.695 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:24:08.155 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:24:08.637 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:24:08.637 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:24:08.639 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 495.0685ms
+2023-10-01 12:24:08.640 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.8922ms
+2023-10-01 12:24:08.653 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.4897ms
+2023-10-01 12:24:08.765 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:24:08.961 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 196.6780ms
+2023-10-01 12:24:24.353 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Carrinho/criarCarrinho application/json 122
+2023-10-01 12:24:24.379 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API)'
+2023-10-01 12:24:24.422 -03:00 [INF] Route matched with {action = "CriarCarrinho", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarCarrinho(Ecommerce_API.Data.DTOS.CarrinhoDeCompras.CreateCarrinhoDto) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:24:26.282 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:24:26.628 -03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE (`p`.`Id` = @__id_0) AND NOT (`p`.`Status`))
+2023-10-01 12:24:26.678 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__estoque_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE `p`.`Quantidade` < @__estoque_0)
+2023-10-01 12:24:26.878 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `CarrinhoDeCompras` (`Bairro`, `CEP`, `Complemento`, `Localidade`, `Logradouro`, `Numero`, `UF`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `CarrinhoDeCompras`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-10-01 12:24:26.959 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:24:27.074 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ProdutosNoCarrinho` (`CarrinhoId`, `ProdutoId`, `NomeProduto`, `Quantidade`, `ValorProduto`, `ValorTotal`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-10-01 12:24:27.087 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:24:27.101 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto'.
+2023-10-01 12:24:27.124 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API) in 2698.0681ms
+2023-10-01 12:24:27.124 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API)'
+2023-10-01 12:24:27.159 -03:00 [ERR] Ocorreu um erro: System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)
+   at Microsoft.AspNetCore.Mvc.ObjectResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:24:27.272 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Carrinho/criarCarrinho application/json 122 - 500 - application/json 2918.8743ms
+2023-10-01 12:25:03.784 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:25:04.376 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:25:04.591 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:25:04.591 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:25:04.596 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:25:04.597 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:25:04.597 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:25:04.731 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:25:05.260 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 533.0001ms
+2023-10-01 12:25:05.269 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:25:05.269 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:25:05.273 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 4.1499ms
+2023-10-01 12:25:05.287 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.0948ms
+2023-10-01 12:25:05.416 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:25:05.777 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 360.8694ms
+2023-10-01 12:25:14.675 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Carrinho/criarCarrinho application/json 122
+2023-10-01 12:25:14.705 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API)'
+2023-10-01 12:25:14.743 -03:00 [INF] Route matched with {action = "CriarCarrinho", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarCarrinho(Ecommerce_API.Data.DTOS.CarrinhoDeCompras.CreateCarrinhoDto) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:25:17.072 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:25:17.457 -03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE (`p`.`Id` = @__id_0) AND NOT (`p`.`Status`))
+2023-10-01 12:25:17.489 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__estoque_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE `p`.`Quantidade` < @__estoque_0)
+2023-10-01 12:25:17.726 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `CarrinhoDeCompras` (`Bairro`, `CEP`, `Complemento`, `Localidade`, `Logradouro`, `Numero`, `UF`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `Id`
+FROM `CarrinhoDeCompras`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-10-01 12:25:17.809 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:25:17.908 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `ProdutosNoCarrinho` (`CarrinhoId`, `ProdutoId`, `NomeProduto`, `Quantidade`, `ValorProduto`, `ValorTotal`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-10-01 12:25:17.916 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:25:17.931 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto'.
+2023-10-01 12:25:17.987 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API) in 3235.7763ms
+2023-10-01 12:25:17.988 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.CriarCarrinho (Ecommerce-API)'
+2023-10-01 12:25:17.995 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Carrinho/criarCarrinho application/json 122 - 201 - application/json;+charset=utf-8 3319.2973ms
+2023-10-01 12:30:54.493 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:30:55.076 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:30:55.362 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:30:55.362 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:30:55.370 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:30:55.370 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:30:55.370 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:30:55.641 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:30:56.145 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 512.1847ms
+2023-10-01 12:30:56.158 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:30:56.158 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:30:56.162 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 4.3154ms
+2023-10-01 12:30:56.195 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.3728ms
+2023-10-01 12:30:56.602 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:30:56.839 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 237.5889ms
+2023-10-01 12:31:15.167 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:31:15.197 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:31:15.231 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:31:16.311 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:31:16.601 -03:00 [INF] Executed DbCommand (48ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:31:16.686 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:31:16.718 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 1483.9483ms
+2023-10-01 12:31:16.718 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:31:16.757 -03:00 [ERR] Ocorreu um erro: System.AggregateException: One or more errors occurred. (Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Task`1 -> ReadCarrinhoDto
+System.Threading.Tasks.Task`1[[Ecommerce_API.Models.CarrinhoDeComprasModel, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto)
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Task`1 -> ReadCarrinhoDto
+System.Threading.Tasks.Task`1[[Ecommerce_API.Models.CarrinhoDeComprasModel, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto
+   at lambda_method67(Closure , Object , ReadCarrinhoDto , ResolutionContext )
+   at Ecommerce_API.Services.CarrinhoComprasService.PesquisarCarrinhoId(Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 180
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:31:16.845 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 500 - application/json 1677.8497ms
+2023-10-01 12:32:07.240 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:32:07.907 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:32:08.095 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:32:08.095 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:32:08.100 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:32:08.100 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:32:08.100 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:32:08.390 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:32:08.958 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 572.4863ms
+2023-10-01 12:32:08.960 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:32:08.964 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.5053ms
+2023-10-01 12:32:08.965 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:32:08.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.0638ms
+2023-10-01 12:32:09.126 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:32:09.319 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.3015ms
+2023-10-01 12:32:15.014 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:32:15.049 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:32:15.083 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:32:16.705 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:32:17.120 -03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:32:17.268 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:32:17.309 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 2218.5043ms
+2023-10-01 12:32:17.310 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:32:17.349 -03:00 [ERR] Ocorreu um erro: System.AggregateException: One or more errors occurred. (Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ReadCarrinhoDto -> ProdutoNoCarrinhoModel
+Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto -> Ecommerce_API.Models.ProdutoNoCarrinhoModel)
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ReadCarrinhoDto -> ProdutoNoCarrinhoModel
+Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto -> Ecommerce_API.Models.ProdutoNoCarrinhoModel
+   at lambda_method68(Closure , Object , ProdutoNoCarrinhoModel , ResolutionContext )
+   at Ecommerce_API.Services.CarrinhoComprasService.PesquisarCarrinhoId(Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CarrinhoComprasService.cs:line 181
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](Utf8JsonWriter writer, TValue& value, JsonTypeInfo jsonTypeInfo, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-10-01 12:32:17.460 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 500 - application/json 2446.2374ms
+2023-10-01 12:36:45.840 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:36:46.516 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:36:46.699 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:36:46.699 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:36:46.705 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:36:46.705 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:36:46.705 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:36:46.915 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:36:47.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:36:47.618 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:36:47.619 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 707.5559ms
+2023-10-01 12:36:47.622 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 4.5357ms
+2023-10-01 12:36:47.639 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.9680ms
+2023-10-01 12:36:47.900 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:36:48.103 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 202.0900ms
+2023-10-01 12:36:54.089 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:36:54.139 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:36:54.226 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:36:55.935 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:36:56.360 -03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:36:56.471 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:36:56.572 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:36:56.615 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:36:56.666 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 2435.0597ms
+2023-10-01 12:36:56.666 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:36:56.672 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 200 - application/json;+charset=utf-8 2582.7963ms
+2023-10-01 12:37:24.996 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:37:25.536 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:37:25.784 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:37:25.784 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:37:25.790 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:37:25.790 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:37:25.790 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:37:26.121 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:37:26.725 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:37:26.725 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:37:26.726 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 609.1931ms
+2023-10-01 12:37:26.730 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 6.6526ms
+2023-10-01 12:37:26.769 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.8468ms
+2023-10-01 12:37:26.908 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:37:27.136 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 227.6474ms
+2023-10-01 12:37:33.050 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:37:33.095 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:37:33.138 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:37:34.912 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:37:35.340 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:37:35.493 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:37:35.545 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:37:35.599 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:37:35.648 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 2503.0977ms
+2023-10-01 12:37:35.648 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:37:35.655 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 200 - application/json;+charset=utf-8 2604.2630ms
+2023-10-01 12:41:01.498 -03:00 [INF] Iniciando Ecommerce API
+2023-10-01 12:41:02.118 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-01 12:41:02.287 -03:00 [INF] Now listening on: https://localhost:7161
+2023-10-01 12:41:02.287 -03:00 [INF] Now listening on: http://localhost:5037
+2023-10-01 12:41:02.296 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-01 12:41:02.296 -03:00 [INF] Hosting environment: Development
+2023-10-01 12:41:02.296 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-10-01 12:41:02.666 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-10-01 12:41:03.245 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 583.2374ms
+2023-10-01 12:41:03.251 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-10-01 12:41:03.251 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-10-01 12:41:03.255 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 4.5270ms
+2023-10-01 12:41:03.271 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.4945ms
+2023-10-01 12:41:03.378 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-10-01 12:41:03.582 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.7467ms
+2023-10-01 12:41:08.958 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:41:08.992 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:41:09.036 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:41:10.567 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:41:10.929 -03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:41:11.029 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:41:11.074 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:41:11.117 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:41:11.161 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 2120.2694ms
+2023-10-01 12:41:11.162 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:41:11.165 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 200 - application/json;+charset=utf-8 2207.0896ms
+2023-10-01 12:41:56.049 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/CarrinhoCompras/12 - -
+2023-10-01 12:41:56.050 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/CarrinhoCompras/12 - - - 404 0 - 0.9395ms
+2023-10-01 12:42:18.691 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:42:18.694 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:42:18.694 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:42:18.699 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:42:18.704 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:42:18.706 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:42:18.710 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:42:18.711 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:42:18.711 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 17.0279ms
+2023-10-01 12:42:18.711 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:42:18.711 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 200 - application/json;+charset=utf-8 20.4598ms
+2023-10-01 12:42:52.249 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/CarrinhoCompras?id=12 - -
+2023-10-01 12:42:52.250 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:42:52.250 -03:00 [INF] Route matched with {action = "PesquisarCarrinhoId", controller = "CarrinhoCompras"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarCarrinhoId(Int32) on controller Ecommerce_API.Controllers.CarrinhoComprasController (Ecommerce-API).
+2023-10-01 12:42:52.307 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-01 12:42:52.310 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-10-01 12:42:52.312 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__produtoNocarrinho_CarrinhoId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`UF`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__produtoNocarrinho_CarrinhoId_0
+LIMIT 1
+2023-10-01 12:42:52.315 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`CarrinhoId` = @__p_0
+2023-10-01 12:42:52.315 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[Ecommerce_API.Data.DTOS.CarrinhoDeCompras.ReadCarrinhoDto, Ecommerce-API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-01 12:42:52.316 -03:00 [INF] Executed action Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API) in 65.9464ms
+2023-10-01 12:42:52.316 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CarrinhoComprasController.PesquisarCarrinhoId (Ecommerce-API)'
+2023-10-01 12:42:52.316 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7161/CarrinhoCompras?id=12 - - - 200 - application/json;+charset=utf-8 66.5850ms

@@ -1,0 +1,930 @@
+2023-09-29 16:52:32.323 -03:00 [INF] Hosting environment: Development
+2023-09-29 16:52:32.323 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 16:52:32.660 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 16:52:33.242 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 590.8076ms
+2023-09-29 16:52:33.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 16:52:33.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 16:52:33.269 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 9.0557ms
+2023-09-29 16:52:33.312 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.4798ms
+2023-09-29 16:52:33.493 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 16:52:33.818 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 325.0946ms
+2023-09-29 16:52:34.045 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/1 application/json 245
+2023-09-29 16:52:34.095 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 16:52:34.166 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 16:52:36.425 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 16:52:36.790 -03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 16:52:37.132 -03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:52:37.137 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:52:37.146 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:52:37.161 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 16:52:37.166 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 16:52:37.170 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 16:52:37.180 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 16:52:37.354 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Produtos` SET `Altura` = @p0, `CategoriaId` = @p1, `CentroDistribuicaoId` = @p2, `Comprimento` = @p3, `DataCriacao` = @p4, `DataModificacao` = @p5, `Descricao` = @p6, `Largura` = @p7, `Nome` = @p8, `Peso` = @p9, `Quantidade` = @p10, `Status` = @p11, `SubcategoriaId` = @p12, `Valor` = @p13
+WHERE `Id` = @p14;
+SELECT ROW_COUNT();
+2023-09-29 16:52:37.397 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 16:52:37.402 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 3230.6884ms
+2023-09-29 16:52:37.402 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 16:52:37.410 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/1 application/json 245 - 204 - - 3365.2194ms
+2023-09-29 16:54:01.028 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 16:54:02.240 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 16:54:02.913 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 16:54:02.913 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 16:54:02.931 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 16:54:02.932 -03:00 [INF] Hosting environment: Development
+2023-09-29 16:54:02.932 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 16:54:04.267 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/1 application/json 245
+2023-09-29 16:54:04.503 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 16:54:04.595 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 16:54:05.771 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 16:54:06.719 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 16:54:06.722 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 16:54:06.749 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 29.6045ms
+2023-09-29 16:54:06.801 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 1029.5146ms
+2023-09-29 16:54:06.946 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 224.0562ms
+2023-09-29 16:54:07.053 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 16:55:01.875 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 54822.3609ms
+2023-09-29 16:55:10.400 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 16:55:11.281 -03:00 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 16:55:24.610 -03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:55:25.760 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:55:26.588 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:55:28.243 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 16:55:28.528 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 16:55:28.827 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 16:55:59.462 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 16:56:12.213 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__p_0
+2023-09-29 16:56:12.348 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Nome`, `c`.`Numero`, `c`.`Status`, `c`.`UF`
+FROM `CentrosDistribuicoes` AS `c`
+WHERE `c`.`Id` = @__p_0
+2023-09-29 16:56:12.474 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`CarrinhoId`, `p`.`ProdutoId`, `p`.`NomeProduto`, `p`.`Quantidade`, `p`.`ValorProduto`, `p`.`ValorTotal`
+FROM `ProdutosNoCarrinho` AS `p`
+WHERE `p`.`ProdutoId` = @__p_0
+2023-09-29 16:56:12.571 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`Id` = @__p_0
+2023-09-29 16:56:24.096 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Produtos` SET `Altura` = @p0, `CategoriaId` = @p1, `CentroDistribuicaoId` = @p2, `Comprimento` = @p3, `DataCriacao` = @p4, `DataModificacao` = @p5, `Descricao` = @p6, `Largura` = @p7, `Nome` = @p8, `Peso` = @p9, `Quantidade` = @p10, `Status` = @p11, `SubcategoriaId` = @p12, `Valor` = @p13
+WHERE `Id` = @p14;
+SELECT ROW_COUNT();
+2023-09-29 16:56:36.421 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 16:56:36.440 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 151828.8179ms
+2023-09-29 16:56:36.442 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 16:56:39.276 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/1 application/json 245 - 204 - - 155015.3439ms
+2023-09-29 16:57:50.848 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 16:57:51.310 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 16:57:51.460 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 16:57:51.460 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 16:57:51.468 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 16:57:51.468 -03:00 [INF] Hosting environment: Development
+2023-09-29 16:57:51.468 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 16:57:51.956 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 16:57:52.422 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 472.9446ms
+2023-09-29 16:57:52.429 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 16:57:52.433 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.3261ms
+2023-09-29 16:57:52.451 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 16:57:52.473 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.6338ms
+2023-09-29 16:57:52.716 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 16:57:52.836 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.7430ms
+2023-09-29 16:58:25.564 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51
+2023-09-29 16:58:25.626 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 16:58:25.703 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 16:58:26.669 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 55
+2023-09-29 16:58:28.507 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 16:58:29.043 -03:00 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 16:58:29.592 -03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:58:29.601 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:58:29.611 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 16:58:29.624 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 16:58:29.698 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 16:58:29.781 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 16:58:29.865 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 16:58:29.877 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 4162.145ms
+2023-09-29 16:58:29.878 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 16:58:29.888 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51 - 204 - - 4324.0127ms
+2023-09-29 17:01:48.907 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:01:49.512 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:01:49.704 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:01:49.704 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:01:49.710 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:01:49.710 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:01:49.710 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:01:49.942 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:01:50.427 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 488.6477ms
+2023-09-29 17:01:50.443 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:01:50.443 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:01:50.448 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 4.4732ms
+2023-09-29 17:01:50.492 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.5231ms
+2023-09-29 17:01:51.050 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:01:51.236 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.6199ms
+2023-09-29 17:01:53.375 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51
+2023-09-29 17:01:53.426 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:01:53.514 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:01:54.457 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 55
+2023-09-29 17:01:55.777 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:01:56.073 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:01:56.729 -03:00 [INF] Executed DbCommand (46ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:01:56.739 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:01:56.748 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:01:56.763 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 17:01:56.847 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:01:56.943 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:01:56.962 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 3435.2124ms
+2023-09-29 17:01:56.963 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:01:57.058 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.CategoriaRepository.EditarCategoria(Categoria categoria) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\CategoriaRepository.cs:line 82
+   at Ecommerce_API.Services.CategoriaService.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 74
+   at Ecommerce_API.Controllers.CategoriaController.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CategoriaController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:01:57.340 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51 - 500 - application/json 3964.4162ms
+2023-09-29 17:02:36.066 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:02:36.082 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 15.8430ms
+2023-09-29 17:02:36.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:02:36.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:02:36.104 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.6082ms
+2023-09-29 17:02:36.119 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.2329ms
+2023-09-29 17:02:36.348 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:02:36.369 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.4241ms
+2023-09-29 17:03:09.264 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:03:09.273 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 8.3069ms
+2023-09-29 17:03:09.295 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:03:09.296 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.5903ms
+2023-09-29 17:03:09.296 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:03:09.304 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.3403ms
+2023-09-29 17:03:09.472 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:03:09.487 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.1819ms
+2023-09-29 17:03:20.428 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:03:22.189 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:03:22.815 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:03:22.815 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:03:22.829 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:03:22.830 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:03:22.830 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:03:23.921 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:03:24.702 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:03:24.702 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:03:24.721 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 18.0001ms
+2023-09-29 17:03:24.722 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 812.5475ms
+2023-09-29 17:03:24.749 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.8870ms
+2023-09-29 17:03:24.879 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:03:25.185 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 305.5983ms
+2023-09-29 17:03:27.879 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51
+2023-09-29 17:03:28.042 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:03:28.222 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:03:30.546 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 55
+2023-09-29 17:03:54.359 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:03:55.251 -03:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:03:57.863 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:03:58.816 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:03:59.989 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:04:14.330 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 17:04:30.764 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:04:30.881 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:04:31.112 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 62871.4641ms
+2023-09-29 17:04:31.115 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:04:31.264 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.CategoriaRepository.EditarCategoria(Categoria categoria) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\CategoriaRepository.cs:line 82
+   at Ecommerce_API.Services.CategoriaService.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 74
+   at Ecommerce_API.Controllers.CategoriaController.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CategoriaController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:04:31.650 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/55 application/json 51 - 500 - application/json 63771.2393ms
+2023-09-29 17:13:13.265 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:13:13.661 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:13:13.782 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:13:13.782 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:13:13.789 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:13:13.789 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:13:13.789 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:13:14.415 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:13:14.854 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 447.7042ms
+2023-09-29 17:13:14.865 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:13:14.865 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:13:14.868 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.3890ms
+2023-09-29 17:13:14.892 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.9756ms
+2023-09-29 17:13:15.044 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:13:15.250 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.7661ms
+2023-09-29 17:13:26.677 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/2 application/json 245
+2023-09-29 17:13:26.732 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:13:26.809 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:13:29.818 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:13:30.371 -03:00 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:13:30.965 -03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:13:30.977 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:13:30.986 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:13:31.006 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:13:31.013 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:13:31.019 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:13:31.034 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:13:31.049 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 4229.0592ms
+2023-09-29 17:13:31.050 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:13:31.110 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.ProdutoRepository.EditarProduto(Produto produto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\ProdutoRepository.cs:line 202
+   at Ecommerce_API.Services.ProdutoService.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\ProdutoService.cs:line 61
+   at Ecommerce_API.Controllers.ProdutoController.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\ProdutoController.cs:line 71
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:13:31.320 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/2 application/json 245 - 500 - application/json 4643.4566ms
+2023-09-29 17:14:59.864 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7161/Produto/2 application/json 228
+2023-09-29 17:14:59.865 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:14:59.865 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:14:59.901 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:14:59.905 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:14:59.916 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:14:59.919 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:14:59.923 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:14:59.924 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:14:59.926 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:14:59.928 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:14:59.931 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:14:59.932 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 67.2275ms
+2023-09-29 17:14:59.932 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:14:59.935 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.ProdutoRepository.EditarProduto(Produto produto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\ProdutoRepository.cs:line 202
+   at Ecommerce_API.Services.ProdutoService.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\ProdutoService.cs:line 61
+   at Ecommerce_API.Controllers.ProdutoController.EditarProduto(UpdateProdutoDto produtoDto, Int32 id) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\ProdutoController.cs:line 71
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:14:59.935 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7161/Produto/2 application/json 228 - 500 - application/json 71.5556ms
+2023-09-29 17:15:25.024 -03:00 [INF] Request starting HTTP/2 PUT https://localhost:7161/Produto/3 application/json 228
+2023-09-29 17:15:25.028 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:15:25.029 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:15:25.165 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:15:25.170 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:15:25.174 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:15:25.177 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:15:25.180 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:15:25.182 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:15:25.184 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:15:25.185 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:15:25.188 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:15:25.523 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Produtos` SET `Altura` = @p0, `CategoriaId` = @p1, `CentroDistribuicaoId` = @p2, `Comprimento` = @p3, `DataCriacao` = @p4, `DataModificacao` = @p5, `Descricao` = @p6, `Largura` = @p7, `Nome` = @p8, `Peso` = @p9, `Quantidade` = @p10, `Status` = @p11, `SubcategoriaId` = @p12, `Valor` = @p13
+WHERE `Id` = @p14;
+SELECT ROW_COUNT();
+2023-09-29 17:15:25.604 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:15:25.605 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 576.2272ms
+2023-09-29 17:15:25.606 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:15:25.607 -03:00 [INF] Request finished HTTP/2 PUT https://localhost:7161/Produto/3 application/json 228 - 204 - - 583.2609ms
+2023-09-29 17:17:26.172 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:17:26.187 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 14.8569ms
+2023-09-29 17:17:26.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:17:26.211 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:17:26.211 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 0.7185ms
+2023-09-29 17:17:26.240 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.4812ms
+2023-09-29 17:17:26.453 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:17:26.475 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 22.6124ms
+2023-09-29 17:17:44.767 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Categoria application/json 41
+2023-09-29 17:17:44.778 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin|lojista)
+2023-09-29 17:17:44.786 -03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-09-29 17:17:44.787 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Categoria application/json 41 - 401 0 - 19.5847ms
+2023-09-29 17:18:04.640 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:18:05.061 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:18:05.202 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:18:05.202 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:18:05.208 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:18:05.208 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:18:05.209 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:18:05.748 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:18:06.248 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 514.0566ms
+2023-09-29 17:18:06.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:18:06.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:18:06.265 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 5.7655ms
+2023-09-29 17:18:06.303 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.4803ms
+2023-09-29 17:18:06.532 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:18:06.745 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.5047ms
+2023-09-29 17:18:10.401 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7161/Categoria application/json 41
+2023-09-29 17:18:10.434 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API)'
+2023-09-29 17:18:10.479 -03:00 [INF] Route matched with {action = "CadastrarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CadastrarCategoria(Ecommerce_API.Data.DTOS.CreateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:18:11.122 -03:00 [INF] Foi requisitada a inserção de uma nova Categoria
+2023-09-29 17:18:12.404 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:18:13.016 -03:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:18:13.547 -03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:13.554 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:13.563 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:13.913 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 128), @p3='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataCriacao`, `DataModificacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2023-09-29 17:18:14.098 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ecommerce_API.Response.Categoria.CategoriaResponse'.
+2023-09-29 17:18:14.148 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API) in 3659.4866ms
+2023-09-29 17:18:14.149 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.CadastrarCategoria (Ecommerce-API)'
+2023-09-29 17:18:14.159 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7161/Categoria application/json 41 - 201 - application/json;+charset=utf-8 3757.9563ms
+2023-09-29 17:18:39.493 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61
+2023-09-29 17:18:39.495 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:18:39.502 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:18:39.514 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 66
+2023-09-29 17:18:39.521 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:18:39.526 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:18:39.538 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:39.541 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:39.545 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:18:39.556 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 17:18:39.617 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:18:39.697 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:18:39.699 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 196.5816ms
+2023-09-29 17:18:39.699 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:18:39.758 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.CategoriaRepository.EditarCategoria(Categoria categoria) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\CategoriaRepository.cs:line 82
+   at Ecommerce_API.Services.CategoriaService.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 74
+   at Ecommerce_API.Controllers.CategoriaController.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CategoriaController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:18:39.997 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61 - 500 - application/json 503.7950ms
+2023-09-29 17:19:22.414 -03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7161/Categoria/65 - -
+2023-09-29 17:19:22.418 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API)'
+2023-09-29 17:19:22.422 -03:00 [INF] Route matched with {action = "ApagarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApagarCategoria(Int32) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:19:22.430 -03:00 [INF] Requisição para deletar uma Categoria de ID: 65
+2023-09-29 17:19:22.544 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:19:22.548 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:19:22.611 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `Categorias`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2023-09-29 17:19:22.644 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:19:22.644 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API) in 222.0271ms
+2023-09-29 17:19:22.645 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.ApagarCategoria (Ecommerce-API)'
+2023-09-29 17:19:22.645 -03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7161/Categoria/65 - - - 204 - - 230.7301ms
+2023-09-29 17:31:08.617 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:31:08.925 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:31:09.021 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:31:09.021 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:31:09.024 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:31:09.024 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:31:09.024 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:31:09.423 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:31:09.851 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 432.4392ms
+2023-09-29 17:31:09.857 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:31:09.857 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:31:09.860 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 3.3024ms
+2023-09-29 17:31:09.885 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.3433ms
+2023-09-29 17:31:10.071 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:31:10.248 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 177.3229ms
+2023-09-29 17:31:36.344 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/2 application/json 245
+2023-09-29 17:31:36.384 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:31:36.417 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:31:37.856 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:31:38.191 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:31:38.233 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-09-29 17:31:38.252 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 1829.9156ms
+2023-09-29 17:31:38.252 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:31:38.255 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/2 application/json 245 - 404 - application/problem+json;+charset=utf-8 1910.6776ms
+2023-09-29 17:31:59.495 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245
+2023-09-29 17:31:59.495 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:31:59.496 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:31:59.505 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:31:59.509 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:31:59.599 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:31:59.666 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:31:59.670 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:31:59.674 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:31:59.679 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:31:59.683 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:31:59.687 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:31:59.689 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:31:59.877 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Produtos` SET `Altura` = @p0, `CategoriaId` = @p1, `CentroDistribuicaoId` = @p2, `Comprimento` = @p3, `DataCriacao` = @p4, `DataModificacao` = @p5, `Descricao` = @p6, `Largura` = @p7, `Nome` = @p8, `Peso` = @p9, `Quantidade` = @p10, `Status` = @p11, `SubcategoriaId` = @p12, `Valor` = @p13
+WHERE `Id` = @p14;
+SELECT ROW_COUNT();
+2023-09-29 17:31:59.913 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:31:59.913 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 417.7138ms
+2023-09-29 17:31:59.914 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:31:59.915 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245 - 204 - - 420.3899ms
+2023-09-29 17:33:02.127 -03:00 [INF] Iniciando Ecommerce API
+2023-09-29 17:33:02.433 -03:00 [INF] User profile is available. Using 'C:\Users\Cleartech\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-29 17:33:02.519 -03:00 [INF] Now listening on: https://localhost:7161
+2023-09-29 17:33:02.519 -03:00 [INF] Now listening on: http://localhost:5037
+2023-09-29 17:33:02.522 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-29 17:33:02.522 -03:00 [INF] Hosting environment: Development
+2023-09-29 17:33:02.522 -03:00 [INF] Content root path: C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\
+2023-09-29 17:33:02.855 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/index.html - -
+2023-09-29 17:33:03.140 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/index.html - - - 200 - text/html;charset=utf-8 286.5566ms
+2023-09-29 17:33:03.144 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - -
+2023-09-29 17:33:03.144 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/_vs/browserLink - -
+2023-09-29 17:33:03.146 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_framework/aspnetcore-browser-refresh.js - - - 200 11996 application/javascript;+charset=utf-8 2.0108ms
+2023-09-29 17:33:03.190 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 46.5870ms
+2023-09-29 17:33:03.313 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - -
+2023-09-29 17:33:03.465 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7161/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 152.4560ms
+2023-09-29 17:33:09.214 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245
+2023-09-29 17:33:09.233 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:33:09.256 -03:00 [INF] Route matched with {action = "EditarProduto", controller = "Produto"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarProduto(Ecommerce_API.Data.DTOS.Produto.UpdateProdutoDto, Int32) on controller Ecommerce_API.Controllers.ProdutoController (Ecommerce-API).
+2023-09-29 17:33:10.590 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:33:11.011 -03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:33:11.145 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:33:11.205 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:33:11.211 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:33:11.215 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:33:11.221 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__categoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Categorias` AS `c`
+    WHERE (`c`.`Id` = @__categoriaId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:33:11.224 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subcategoriaId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE (`s`.`Id` = @__subcategoriaId_0) AND NOT (`s`.`Status`))
+2023-09-29 17:33:11.227 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__centroId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE (`c`.`Id` = @__centroId_0) AND NOT (`c`.`Status`))
+2023-09-29 17:33:11.348 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Double), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (Size = 512), @p7='?' (DbType = Double), @p8='?' (Size = 128), @p9='?' (DbType = Double), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p13='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Produtos` SET `Altura` = @p0, `CategoriaId` = @p1, `CentroDistribuicaoId` = @p2, `Comprimento` = @p3, `DataCriacao` = @p4, `DataModificacao` = @p5, `Descricao` = @p6, `Largura` = @p7, `Nome` = @p8, `Peso` = @p9, `Quantidade` = @p10, `Status` = @p11, `SubcategoriaId` = @p12, `Valor` = @p13
+WHERE `Id` = @p14;
+SELECT ROW_COUNT();
+2023-09-29 17:33:11.373 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-09-29 17:33:11.380 -03:00 [INF] Executed action Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API) in 2117.3723ms
+2023-09-29 17:33:11.380 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.ProdutoController.EditarProduto (Ecommerce-API)'
+2023-09-29 17:33:11.385 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Produto/3 application/json 245 - 204 - - 2170.6881ms
+2023-09-29 17:37:01.871 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61
+2023-09-29 17:37:01.872 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:37:01.875 -03:00 [INF] Route matched with {action = "EditarCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] EditarCategoria(Int32, Ecommerce_API.Data.DTOS.UpdateCategoriaDto) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:37:01.881 -03:00 [INF] Foi requisitada a edição de uma Categoria de ID: 66
+2023-09-29 17:37:01.885 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:37:01.890 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-09-29 17:37:01.903 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `SubCategorias` AS `s`
+    WHERE UPPER(`s`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:37:01.907 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Produtos` AS `p`
+    WHERE UPPER(`p`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:37:01.909 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToUpper_0='?' (Size = 128)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `CentrosDistribuicoes` AS `c`
+    WHERE UPPER(`c`.`Nome`) = @__ToUpper_0)
+2023-09-29 17:37:01.913 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+2023-09-29 17:37:01.933 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroDistribuicaoId`, `p`.`Comprimento`, `p`.`DataCriacao`, `p`.`DataModificacao`, `p`.`Descricao`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Quantidade`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+2023-09-29 17:37:01.945 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:37:01.946 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API) in 71.6236ms
+2023-09-29 17:37:01.947 -03:00 [INF] Executed endpoint 'Ecommerce_API.Controllers.CategoriaController.EditarCategoria (Ecommerce-API)'
+2023-09-29 17:37:01.970 -03:00 [ERR] Ocorreu um erro: System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindValue(TKey key)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityReferenceMap.TryGet(Object entity, IEntityType entityType, InternalEntityEntry& entry, Boolean throwOnNonUniqueness)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.TryGetEntry(Object entity, IEntityType entityType, Boolean throwOnTypeMismatch)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity, IEntityType entityType)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at Ecommerce_API.Repository.CategoriaRepository.EditarCategoria(Categoria categoria) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Repository\CategoriaRepository.cs:line 82
+   at Ecommerce_API.Services.CategoriaService.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Services\CategoriaService.cs:line 74
+   at Ecommerce_API.Controllers.CategoriaController.EditarCategoria(Int32 id, UpdateCategoriaDto categoriaDto) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Controllers\CategoriaController.cs:line 85
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Ecommerce_API.Middlewares.ErrorMiddleware.Invoke(HttpContext context) in C:\Users\Cleartech\Desktop\DESAFIOS\T4-MarianaCardoso\API\Ecommerce-API\Ecommerce-API\Middlewares\ErrorMiddleware.cs:line 21
+2023-09-29 17:37:02.064 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7161/Categoria/66 application/json 61 - 500 - application/json 192.7008ms
+2023-09-29 17:37:34.505 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7161/Categoria/56 - -
+2023-09-29 17:37:34.507 -03:00 [INF] Executing endpoint 'Ecommerce_API.Controllers.CategoriaController.PesquisarCategoriaId (Ecommerce-API)'
+2023-09-29 17:37:34.507 -03:00 [INF] Route matched with {action = "PesquisarCategoriaId", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisarCategoriaId(Int32) on controller Ecommerce_API.Controllers.CategoriaController (Ecommerce-API).
+2023-09-29 17:37:34.509 -03:00 [INF] Foi requisitada a pesquisa de uma Categoria de ID: 56
+2023-09-29 17:37:34.548 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-09-29 17:37:34.551 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataCriacao`, `c`.`DataModificacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-09-29 17:37:34.581 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataCriacao`, `s`.`DataModificacao`, `s`.`Nome`, `s`.`Status`
+FROM `SubCategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-09-29 17:37:34.617 -03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce_API.Response.Categoria.CategoriaResponse'.
+2023-09-29 17:37:34.637 -03:00 [INF] Executed action Ecommerce_API.Controllers.CategoriaController.PesquisarCategoriaId (Ecommerce-API) in 129.3051ms

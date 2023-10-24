@@ -1,0 +1,13 @@
+2023-10-09 16:36:20.265 -03:00 [INF] Iniciando Ecommerce API
+2023-10-09 16:36:21.519 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
+2023-10-09 16:36:21.648 -03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EcommerceAPI' AND TABLE_NAME='__EFMigrationsHistory';
+2023-10-09 16:36:21.660 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='EcommerceAPI' AND TABLE_NAME='__EFMigrationsHistory';
+2023-10-09 16:36:21.682 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2023-10-09 16:36:21.695 -03:00 [INF] No migrations were applied. The database is already up to date.
+2023-10-09 16:37:45.733 -03:00 [INF] Iniciando Ecommerce API
+2023-10-09 16:37:46.850 -03:00 [INF] Entity Framework Core 6.0.10 initialized 'EcommerceContext' using provider 'Pomelo.EntityFrameworkCore.MySql:6.0.1' with options: using lazy loading proxies ServerVersion 8.0.32-mysql 
