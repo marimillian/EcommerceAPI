@@ -1,6 +1,6 @@
 
 # Introdução
-Esta API foi desenvolvida durante o projeto de capacitação da empresa Cleasale chamado Cleartech, onde foi possível aplicar todo o conhecimento adquirido ao longo de 9 meses. O intuito da API é simular um E-commerce onde é possível cadastrar, editar, excluir e pesquisar Categorias, Subcategorias, Produtos, Centro de Distribuição, Carrinho de Compras e Usuários. 
+Esta API foi desenvolvida durante o projeto de capacitação da empresa Cleasale chamado Cleartech, onde foi possível aplicar todo o conhecimento adquirido ao longo de 9 meses. O intuito da API é simular um E-commerce com requisições de cadastrar, editar, excluir e pesquisar Categorias, Subcategorias, Produtos, Centro de Distribuição, Carrinho de Compras e Usuários. 
 
 # Como usar
 É possível utilizar o Postman e Swagger para realizar as requisições. Há particularidades de acessos para algumas das requisições no E-commerce, pois é necessário o login de Administrador ou Lojista. Para cadastrar o usuário deve realizar a requisição através de UsuariosApi. O login do administrador já é configurado:
