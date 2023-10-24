@@ -1,4 +1,3 @@
-# EcommerceAPI
 
 # Introdução
 Esta API foi desenvolvida durante o projeto de capacitação da empresa Cleasale chamado Cleartech, onde foi possível aplicar todo o conhecimento adquirido ao longo de 9 meses. O intuito da API é simular um E-commerce onde é possível cadastrar, editar, excluir e pesquisar Categorias, Subcategorias, Produtos, Centro de Distribuição, Carrinho de Compras e Usuários. 
