@@ -23,7 +23,7 @@ Add-Migration "Migration"
 ```
 Update
 ```csharp
-Update-Dabate
+Update-Database
 ```
 
 Após as configurações é só executar a API que o Swagger abre automaticamente para realizar as requisições desejadas. 
